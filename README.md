@@ -5,7 +5,7 @@ A tiny, one-liner networking library built on top of NSURLSession and AFNetworki
 
 Okay, so what's it for?
 =====
-For downloading an uploading stuff to the internets from your iOS or Mac app.
+For downloading an uploading stuff to the internets from your iOS app.
 
 Is it tested?
 =====
