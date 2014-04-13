@@ -11,4 +11,9 @@ Is it tested?
 =====
 Well, I use it in production. I haven't written unit tests so I can't guarantee anything. If you think it sucks, you're free to do so. But it'd be cool if you'd tell me why, or make a pull request.
 
+Why no CocoaPods?
+=====
+Because I haven't gotten around to doing that yet. I'll add it though, because I like CocoaPods.
+
+
 
