@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WSDownloader"
-  s.version          = "0.1.0"
+  s.version          = "1.0"
   s.summary          = "A tiny, one-liner networking library built on top of NSURLSession and AFNetworking."
   s.homepage         = "https://github.com/wandersiemers/WSDownloader"
   s.license          = 'MIT'
