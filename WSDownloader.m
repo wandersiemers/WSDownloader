@@ -39,7 +39,6 @@
 			completionBlock(responseObject, nil);
 		});
 	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-		NSLog(@"Error downloading images %@", error);
 		dispatch_async(dispatch_get_main_queue(), ^{
 			completionBlock(nil, error);
 		});
@@ -64,6 +63,19 @@
 		});
 	}];
 	[dataTask resume];
+}
+
++ (void)uploadDictionary:(NSDictionary *)dictionary toURL:(NSURL *)url completion:(WSDownloadUploadCompletionBlock)completionBlock
+{
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+	
+	[manager POST:[url absoluteString] parameters:dictionary
+		  success:^(AFHTTPRequestOperation *operation, id responseObject) {
+			  completionBlock(responseObject, nil);
+		  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+			  completionBlock(nil, error);
+		  }];
+	
 }
 
 @end

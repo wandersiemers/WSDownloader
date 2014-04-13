@@ -9,6 +9,7 @@
 typedef void (^WSDownloaderJSONCompletionBlock)(id JSON, NSError *error);
 typedef void (^WSDownloaderDataCompletionBlock)(NSData *binaryData, NSError *error);
 typedef void (^WSDownloaderImageCompletionBlock)(UIImage *image, NSError *error);
+typedef void (^WSDownloadUploadCompletionBlock)(id responseObject, NSError *error);
 
 
 @interface WSDownloader : NSObject
@@ -35,4 +36,15 @@ typedef void (^WSDownloaderImageCompletionBlock)(UIImage *image, NSError *error)
  */
 + (void)downloadImageFromURL:(NSURL *)url completion:(WSDownloaderImageCompletionBlock)completionBlock;
 
+/** Sends a PUT HTTP request to the passed passed URL with the contents of dictionary as parameters and calls the completion block on completion
+ 
+ @param dictionary The data to upload to the passed url
+ @param url The URL to upload the data to
+ @param completionBlock The callback block, which is called on completion of the upload (whether failed or succesful).
+ 
+ @note If the completion block's error parameter is non-nil, the download was unsuccessful and responseObject will be nil.
+ */
++ (void)uploadDictionary:(NSDictionary *)dictionary toURL:(NSURL *)url completion:(WSDownloadUploadCompletionBlock)completionBlock;
+
 @end
+
