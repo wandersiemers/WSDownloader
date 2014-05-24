@@ -7,9 +7,13 @@ Okay, so what's it for?
 =====
 For downloading an uploading stuff to the internets from your iOS or Mac app.
 
-Is it tested?
+Installation
 =====
-Well, I use it in production. I haven't written unit tests so I can't guarantee anything. If you think it sucks, you're free to do so. But it'd be cool if you'd tell me why, or make a pull request.
+Use Cocoapods. Add this to your podfile:
+```ruby
+pod 'WSDownloader', '~> 1.0'
+```
 
+Alternatively, you can just add drag the files into your xcodeproj, but you'll need to add AFNetworking manually and you won't get easy updates.
 
-
+Feedback is welcome: I'm @wandersiemers on Twitter.
