@@ -9,7 +9,7 @@ For downloading an uploading stuff to the internets from your iOS or Mac app.
 
 Installation
 =====
-Use Cocoapods. Add this to your podfile:
+Use CocoaPods. Add this to your podfile:
 ```ruby
 pod 'WSDownloader', '~> 1.0'
 ```
